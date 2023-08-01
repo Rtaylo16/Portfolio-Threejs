@@ -1,0 +1,146 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_draco_mesh_compression"
+    ],
+    "extensionsRequired" : [
+        "KHR_draco_mesh_compression"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Windows",
+            "rotation" : [
+                0,
+                -0.3826834559440613,
+                0,
+                0.9238795042037964
+            ],
+            "scale" : [
+                4,
+                4,
+                4
+            ],
+            "translation" : [
+                -0.1252211183309555,
+                0.020952314138412476,
+                -0.03158582001924515
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    1,
+                    0.16466626524925232,
+                    0.06764724850654602,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Plane.017",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TANGENT" : 2,
+                        "TEXCOORD_0" : 3,
+                        "COLOR_0" : 4
+                    },
+                    "extensions" : {
+                        "KHR_draco_mesh_compression" : {
+                            "bufferView" : 0,
+                            "attributes" : {
+                                "POSITION" : 0,
+                                "NORMAL" : 1,
+                                "TANGENT" : 2,
+                                "TEXCOORD_0" : 3,
+                                "COLOR_0" : 4
+                            }
+                        }
+                    },
+                    "indices" : 5,
+                    "material" : 0,
+                    "mode" : 4
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "componentType" : 5126,
+            "count" : 12,
+            "max" : [
+                0.9339012503623962,
+                1.210558295249939,
+                -1.0561267137527466
+            ],
+            "min" : [
+                -0.9371249675750732,
+                0.32426729798316956,
+                -1.0561267137527466
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 12,
+            "type" : "VEC3"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 12,
+            "type" : "VEC4"
+        },
+        {
+            "componentType" : 5126,
+            "count" : 12,
+            "type" : "VEC2"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 12,
+            "normalized" : true,
+            "type" : "VEC4"
+        },
+        {
+            "componentType" : 5123,
+            "count" : 18,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 322,
+            "byteOffset" : 0
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 324,
+            "uri" : "data:application/octet-stream;base64,RFJBQ08CAgEBAAAADAYEBgAAA9/3Af8BM/8BM/8BM/8BM/8BMwX/AAAAAAABAAACAAADAAABAAkDAAACAQEJAwABAwEECQQAAgIBAwkCAAMCAQIEBAAEAQEBAQAPAwEQLwEwBADcioA7JwAAAOicojwAAACE8gAAjthQHgDQOkV5AAAACOUBAOyxoTwAwHiK8gAAABDKAwAAAAAAAP8/AABs52+/XQamPikvh7/Kfe8/DgADAQALA606H1UFA7v+hgAACAAAAP8DAAD/AQAACgEBAQEBAQFAAQAAAAAAAAAAAAAAgD8AAAAAAAAAgAAAgL8AAIA/DAEBAQANAwEgJwEgBADIWITPCQDOCQAQsQBgnQAAHQsA4gkAAAAAAAD/DwAAoMQAPQAAAADKfW8/DAEBAQEBAQFAAQD//wAA//8AAAAA"
+        }
+    ]
+}
