@@ -246,7 +246,7 @@ function App() {
 
   const LiquidButton = () => {
     const handleClick = () => {
-      window.open("https://docs.google.com/document/d/1_f7TG1-ojguBEUWq3XbzDmBQF6LbrSDZSXBjtPzDT20/edit?pli=1", "_blank");
+      window.open("Ryan-Taylor.pdf", "_blank");
     };
     return (
       <motion.div
