@@ -37,15 +37,24 @@ function enableShadows(obj) {
 
 
 
- function Office({ circleFirst, circleSecond, circleThird} ) {
+ function Office({ circleFirst, circleSecond, circleThird, setLoading, setModelPreloaded} ) {
     const { scene } = useGLTF('/models/officelights.gltf');
     const { size } = useThree();
     const [scale, setScale] = useState(0.6);
+    const [isLoaded, setIsLoaded] = useState(false);
 
     
     const actualRoom = scene; // Get the actual room from the scene
 
     const { setIsModelLoaded } = useContext(ModelContext);;
+
+    useEffect(() => {
+      if (actualRoom && !isLoaded) {
+          setLoading(false);  // Update the state once the model is loaded
+          // If you still want to update the context
+          console.log('Model is loaded');
+      }
+  }, [actualRoom, setIsModelLoaded, isLoaded])
   
     useLayoutEffect(() => {
       actualRoom.traverse((child) => {

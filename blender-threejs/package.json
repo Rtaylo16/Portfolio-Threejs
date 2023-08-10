@@ -29,6 +29,7 @@
     "react-scripts": "^5.0.1",
     "react-spinners": "^0.13.8",
     "react-three-gui": "^0.4.2",
+    "stats.js": "^0.17.0",
     "styled-components": "^5.3.11",
     "three": "^0.153.0",
     "three-stdlib": "^2.23.10",

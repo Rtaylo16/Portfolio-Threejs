@@ -20,19 +20,21 @@ import useConsistentScale from './Utils/Size'
 import useFloorCircles from './Utils/circles';
 
 
+
 extend({ THREE });
 extend({ VideoTexture });
 extend({animated})
 
 
 
-export default function Firstload({ className, children }) {
+export default function Firstload({ className, children, setLoading }) {
 
 
   const { circleFirst, circleSecond, circleThird } = useFloorCircles();
 
   return (
     <div className={className}>
+
       <Canvas
         style={{
           height: "100vh",
@@ -48,7 +50,9 @@ export default function Firstload({ className, children }) {
           castShadow 
           circleFirst={circleFirst}
           circleSecond={circleSecond}
-          circleThird={circleThird}/>
+          circleThird={circleThird}
+          setLoading={setLoading}
+          />
           <Floor 
               circleFirst={circleFirst}
               circleSecond={circleSecond}

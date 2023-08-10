@@ -2,12 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import './customStyles.css'
 import Firstload from './Composition/Composition'
+import Office from './Composition/Utils/Office'
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import AnimatedTitle from './Composition/Utils/AnimatedText';
 import AnimatedSubhead from './Composition/Utils/AnimatedSubhead';
 import Spinner from './Composition/Utils/Spinner';
 import ContactForm from './Composition/Utils/contact';
+import { Canvas } from "@react-three/fiber";
 import { useLayoutEffect, Suspense, useRef, useEffect, useState, useCallback } from 'react';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -27,6 +29,7 @@ import { motion, useScroll } from 'framer-motion';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [modelPreloaded, setModelPreloaded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalOpen2, setModalOpen2] = useState(false);
 
@@ -211,14 +214,7 @@ function App() {
 
   };
 
-  useEffect(() => {
-    // simulate loading time
-    setTimeout(() => {
-      setLoading(false);
-    }, 7000);
 
-
-  }, []);
 
 
 
@@ -266,11 +262,19 @@ function App() {
   };
 
   return loading ? (
-    <Spinner />
+    <>
+      <Spinner />
+      <div style={{ position: 'absolute', left: '-10000px' }}>
+        <Canvas>
+        <Office setLoading={setLoading} />
+      </Canvas>
+      </div>
+    </>
   ) : (
     <>
+
       <div class="canvas">
-        <Firstload class="FirstLoad" />
+        <Firstload setLoading={setLoading} class="FirstLoad" />
       </div>
 
       <div class="page">
